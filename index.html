@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meine Notizen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <input class="title" id="title" type="text" value="Meine Notizen" placeholder="Überschrift eingeben" aria-label="Überschrift" maxlength="80">
+
+  <section class="start" aria-label="Startseite">
+    <textarea class="intro" id="intro" rows="3" placeholder="Willkommen! Schreib hier einen kurzen Einleitungstext." aria-label="Einleitungstext"></textarea>
+    <nav class="jump" id="jump" aria-label="Direkt zu einem Tab springen"></nav>
+  </section>
+
+  <div class="tabs" role="tablist" aria-label="Notiz-Tabs" id="tabs"></div>
+
+  <section class="panel" id="panel" role="tabpanel" aria-labelledby="tab-0">
+    <div class="toolbar">
+      <button type="button" id="rename">Tab umbenennen</button>
+      <span id="status" aria-live="polite">Bereit</span>
+    </div>
+    <textarea id="editor" placeholder="Hier schreiben …" aria-label="Text des aktuellen Tabs"></textarea>
+  </section>
+  <p class="hint">Alles wird automatisch in diesem Browser gespeichert.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
